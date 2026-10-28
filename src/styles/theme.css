@@ -1,0 +1,103 @@
+:root {
+  --primary-start: #667eea;
+  --primary-end: #764ba2;
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --primary-color: #667eea;
+  --primary-light: #818cf8;
+  --bg-gradient: linear-gradient(160deg, #f0f4ff 0%, #eef1f8 40%, #f5f8fc 100%);
+  --card-radius: 12px;
+  --card-shadow: 0 4px 20px rgba(102, 126, 234, 0.08);
+  --card-shadow-hover: 0 8px 30px rgba(102, 126, 234, 0.15);
+  --urgent-gradient: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+  --urgent-color: #ee5a24;
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 12px;
+  --space-lg: 16px;
+  --space-xl: 24px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background: var(--bg-gradient);
+  min-height: 100vh;
+  margin: 0;
+}
+
+.el-button--primary {
+  background: var(--primary-gradient) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  font-weight: 500;
+}
+.el-button--primary:hover {
+  opacity: 0.88;
+  background: var(--primary-gradient) !important;
+}
+.el-button--primary:active {
+  opacity: 0.95;
+}
+.el-button--primary.is-disabled,
+.el-button--primary.is-loading {
+  opacity: 0.6;
+}
+
+.el-button--danger {
+  border-radius: 8px !important;
+}
+
+.el-button--default {
+  border-radius: 8px !important;
+}
+
+.el-card {
+  border-radius: var(--card-radius) !important;
+  border: 1px solid rgba(255,255,255,0.6) !important;
+  box-shadow: var(--card-shadow) !important;
+  transition: box-shadow 0.3s ease, transform 0.3s ease !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+}
+.el-card:hover {
+  box-shadow: var(--card-shadow-hover) !important;
+}
+
+.el-input__wrapper {
+  border-radius: 10px !important;
+  transition: box-shadow 0.2s ease !important;
+}
+.el-input__wrapper.is-focus {
+  box-shadow: 0 0 0 1px var(--primary-color) inset !important;
+}
+
+.el-dialog {
+  border-radius: 16px !important;
+}
+
+.el-tag {
+  border-radius: 6px !important;
+}
+
+.el-checkbox__input.is-checked .el-checkbox__inner {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+
+.el-progress-bar__inner {
+  background: var(--primary-gradient) !important;
+}
+
+.el-empty__description p {
+  color: #909399;
+}
+
+a { text-decoration: none; }
+@supports not (backdrop-filter: blur(1px)) {
+  .login-card,
+  .register-card {
+    background: rgba(255, 255, 255, 0.95) !important;
+  }
+  .navbar {
+    background: rgba(255, 255, 255, 0.98) !important;
+  }
+}

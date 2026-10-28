@@ -1,0 +1,12 @@
+﻿services:
+  - type: web
+    name: zhixue-tupu
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run build && cd server && npm install
+    startCommand: node server/src/server.js
+    envVars:
+      - key: JWT_SECRET
+        sync: false
+      - key: NODE_ENV
+        value: production
